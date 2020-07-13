@@ -1,6 +1,4 @@
-﻿using ProyectoFinal.Helpers;
-using ProyectoFinal.Request;
-using ProyectoFinal.Response;
+﻿using ProyectoFinal.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +9,10 @@ using ProyectoFinal.Proxy;
 
 namespace ProyectoFinal.Controllers
 {
-    public class CustomerController : Controller
+    public class SellerController : Controller
     {
-        CustomerProxy proxy = new CustomerProxy();
-
-        // GET: Customer
+        SellerProxy proxy = new SellerProxy();
+        // GET: Seller
         public ActionResult Index()
         {
             return View();
@@ -36,19 +33,18 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(Customer_Req customer)
+        public ActionResult Add(Seller_Req model)
         {
-            if (customer.CustomerID == 0)
+            if (model.SellerID == 0)
             {
-                var response = Task.Run(() => proxy.Add(customer));
+                var response = Task.Run(() => proxy.Add(model));
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
             else
             {
-                var response = Task.Run(() => proxy.Update(customer));
+                var response = Task.Run(() => proxy.Update(model));
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
-
         }
 
 
@@ -59,6 +55,5 @@ namespace ProyectoFinal.Controllers
             string message = response.Result.Message;
             return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
-
     }
 }

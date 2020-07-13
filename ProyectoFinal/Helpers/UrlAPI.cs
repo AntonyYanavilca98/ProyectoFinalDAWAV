@@ -1,8 +1,13 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProyectoFinal.Helpers
 {
-    public class ApiURL
+    public class UrlAPI
     {
 
         public static string Url(int model)
@@ -47,4 +52,7 @@ namespace ProyectoFinal.Helpers
 
             return modelUrl;
         }
+
+
     }
+}

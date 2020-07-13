@@ -1,9 +1,4 @@
-﻿using ProyectoFinal.Helpers;
-using ProyectoFinal.Request;
-using ProyectoFinal.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using ProyectoFinal.Request;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -11,11 +6,11 @@ using ProyectoFinal.Proxy;
 
 namespace ProyectoFinal.Controllers
 {
-    public class CustomerController : Controller
+    public class SalesInvoiceDetailController : Controller
     {
-        CustomerProxy proxy = new CustomerProxy();
+        SalesInvoiceDetailProxy proxy = new SalesInvoiceDetailProxy();
 
-        // GET: Customer
+        // GET: SalesInvoiceDetail
         public ActionResult Index()
         {
             return View();
@@ -36,29 +31,27 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(Customer_Req customer)
+        public ActionResult Add(SalesInvoceDetail_Req model)
         {
-            if (customer.CustomerID == 0)
-            {
-                var response = Task.Run(() => proxy.Add(customer));
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-            else
-            {
-                var response = Task.Run(() => proxy.Update(customer));
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-
+            var response = Task.Run(() => proxy.Add(model));
+            string message = response.Result.Message;
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
 
+        [HttpPut]
+        public ActionResult Update(SalesInvoceDetail_Req model)
+        {
+            var response = Task.Run(() => proxy.Update(model));
+            string message = response.Result.Message;
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
+        }
 
-        [HttpPost]
+        [HttpDelete]
         public ActionResult Delete(int id)
         {
             var response = Task.Run(() => proxy.Delete(id));
             string message = response.Result.Message;
             return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
-
     }
 }

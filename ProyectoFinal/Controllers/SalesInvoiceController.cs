@@ -1,6 +1,4 @@
-﻿using ProyectoFinal.Helpers;
-using ProyectoFinal.Request;
-using ProyectoFinal.Response;
+﻿using ProyectoFinal.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +9,10 @@ using ProyectoFinal.Proxy;
 
 namespace ProyectoFinal.Controllers
 {
-    public class CustomerController : Controller
+    public class SalesInvoiceController : Controller
     {
-        CustomerProxy proxy = new CustomerProxy();
-
-        // GET: Customer
+        SalesInvoiceProxy proxy = new SalesInvoiceProxy();
+        // GET: SalesInvoice
         public ActionResult Index()
         {
             return View();
@@ -36,21 +33,19 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(Customer_Req customer)
+        public ActionResult Add(SalesInvoiceRegister_Req model)
         {
-            if (customer.CustomerID == 0)
-            {
-                var response = Task.Run(() => proxy.Add(customer));
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-            else
-            {
-                var response = Task.Run(() => proxy.Update(customer));
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-
+            var response = Task.Run(() => proxy.Add(model));
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpPut]
+        public ActionResult Update(SalesInvoce_Req model)
+        {
+            var response = Task.Run(() => proxy.Update(model));
+            string message = response.Result.Message;
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
+        }
 
         [HttpPost]
         public ActionResult Delete(int id)
@@ -59,6 +54,5 @@ namespace ProyectoFinal.Controllers
             string message = response.Result.Message;
             return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
-
     }
 }

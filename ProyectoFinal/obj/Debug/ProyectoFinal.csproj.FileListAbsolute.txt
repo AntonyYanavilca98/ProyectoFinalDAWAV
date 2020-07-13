@@ -104,3 +104,7 @@ C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Mi
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v4.resources
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v5.resources
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v6.resources
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\bin\AutoMapper.dll
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\bin\Microsoft.Owin.dll
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\bin\Owin.dll
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\bin\Microsoft.Owin.xml

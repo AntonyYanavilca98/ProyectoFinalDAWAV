@@ -1,10 +1,10 @@
 ﻿using ProyectoFinal.Helpers;
 
+
 namespace ProyectoFinal.Servicios
 {
-    public interface IServiceIndex
+    public interface IServiceIndex<T>
     {
-
         RespBase<T> GetList();
         RespBase<T> Get(int ID);
         RespBase<T> Add(T model);

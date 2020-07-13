@@ -15,11 +15,7 @@ namespace ProyectoFinal.Migrations
 
         protected override void Seed(ProyectoFinal.Data.ProyectoFinalContext context)
         {
-            context.Customers.AddOrUpdate(x => x.CustomerID,
-        new Customer() { CustomerID = 1, Name = "Jane", LastName = "Austen", Birthdate = DateTime.Today, CreateAt= DateTime.Today, State = true },
-        new Customer() { CustomerID = 2, Name = "Charles", LastName = "Dickens", Birthdate = DateTime.Today, CreateAt = DateTime.Today, State = true },
-        new Customer() { CustomerID = 3, Name = "Miguel", LastName = "Cervantes", Birthdate = DateTime.Today, CreateAt = DateTime.Today, State = true }
-        );
+   
 
         }
     }

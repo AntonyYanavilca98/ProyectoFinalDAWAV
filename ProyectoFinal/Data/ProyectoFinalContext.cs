@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,19 +16,19 @@ namespace ProyectoFinal.Data
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
+
+
         public ProyectoFinalContext() : base("name=MyContextDB")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public System.Data.Entity.DbSet<ProyectoFinal.Models.Customer> Customers { get; set; }
+       
 
-        //public System.Data.Entity.DbSet<ProyectoFinal.Models.Seller> Sellers { get; set; }
-
-        //public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoceDetail> SalesInvoceDetails { get; set; }
-
-        //public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoce> SalesInvoces { get; set; }
-
-        //public System.Data.Entity.DbSet<ProyectoFinal.Models.Product> Products { get; set; }
+        public DbSet<Seller> Sellers { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<SalesInvoce> SalesInvoces { get; set; }
+        public DbSet<SalesInvoceDetail> SalesInvoceDetails { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
