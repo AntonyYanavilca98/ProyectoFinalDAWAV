@@ -100,3 +100,7 @@ C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pd
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.Initial.resources
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
 C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v2.resources
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v3.resources
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v4.resources
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v5.resources
+C:\Cursos\6TO ciclo\DAWAV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Migrations.v6.resources

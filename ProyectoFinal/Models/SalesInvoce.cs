@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -27,8 +28,9 @@ namespace ProyectoFinal.Models
 
         public int SellerID { get; set; }
 
-        public Customer Customer { get; set; }
-        public Seller Seller { get; set; }
-        public ICollection<SalesInvoceDetail> SalesInvoceDetails { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual Seller Seller { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<SalesInvoceDetail> SalesInvoceDetails { get; set; }
     }
 }

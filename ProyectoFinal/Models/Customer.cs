@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace ProyectoFinal.Models
 {
@@ -24,7 +26,8 @@ namespace ProyectoFinal.Models
 
         public bool State { get; set; }
 
-        public ICollection<SalesInvoceDetail> SalesInvoceDetails { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<SalesInvoce> SalesInvoces { get; set; }
 
     }
 }

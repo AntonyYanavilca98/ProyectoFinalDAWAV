@@ -17,16 +17,17 @@ namespace ProyectoFinal.Data
     
         public ProyectoFinalContext() : base("name=MyContextDB")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public System.Data.Entity.DbSet<ProyectoFinal.Models.Customer> Customers { get; set; }
 
-        public System.Data.Entity.DbSet<ProyectoFinal.Models.Seller> Sellers { get; set; }
+        //public System.Data.Entity.DbSet<ProyectoFinal.Models.Seller> Sellers { get; set; }
 
-        public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoceDetail> SalesInvoceDetails { get; set; }
+        //public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoceDetail> SalesInvoceDetails { get; set; }
 
-        public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoce> SalesInvoces { get; set; }
+        //public System.Data.Entity.DbSet<ProyectoFinal.Models.SalesInvoce> SalesInvoces { get; set; }
 
-        public System.Data.Entity.DbSet<ProyectoFinal.Models.Product> Products { get; set; }
+        //public System.Data.Entity.DbSet<ProyectoFinal.Models.Product> Products { get; set; }
     }
 }

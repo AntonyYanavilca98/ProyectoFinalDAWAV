@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,6 +27,8 @@ namespace ProyectoFinal.Models
         public DateTime CreateAt { get; set; }
 
         public bool State { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<SalesInvoceDetail> SalesInvoceDetails { get; set; }
 
     }
 }

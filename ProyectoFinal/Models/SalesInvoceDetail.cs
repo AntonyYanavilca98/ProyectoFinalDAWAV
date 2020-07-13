@@ -26,13 +26,7 @@ namespace ProyectoFinal.Models
 
         public int ProductID { get; set; }
 
-        //Foreign Key
-        public int CustomerID { get; set; }
-
-        public int SellerID { get; set; }
-
-        public Customer Customer { get; set; }
-        public Seller Seller { get; set; }
-        public SalesInvoce SalesInvoce { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual SalesInvoce SalesInvoce { get; set; }
     }
 }
