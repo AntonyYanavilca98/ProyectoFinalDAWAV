@@ -26,5 +26,7 @@ namespace ProyectoFinal.Models
         public DateTime CreateAt { get; set; }
 
         public bool State { get; set; }
+
+        public ICollection<SalesInvoce> SalesInvoces { get; set; }
     }
 }

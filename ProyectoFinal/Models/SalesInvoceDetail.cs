@@ -33,6 +33,6 @@ namespace ProyectoFinal.Models
 
         public Customer Customer { get; set; }
         public Seller Seller { get; set; }
-
+        public SalesInvoce SalesInvoce { get; set; }
     }
 }

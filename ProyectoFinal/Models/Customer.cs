@@ -24,5 +24,7 @@ namespace ProyectoFinal.Models
 
         public bool State { get; set; }
 
+        public ICollection<SalesInvoceDetail> SalesInvoceDetails { get; set; }
+
     }
 }
